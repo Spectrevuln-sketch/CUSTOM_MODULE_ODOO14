@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_x_material_purchase","access_x_material_purchase","model_x_material_purchase",,1,1,1,1
+"access_x_supplyer_purchase","access_x_supplyer_purchase","model_x_supplyer_purchase",,1,1,1,1

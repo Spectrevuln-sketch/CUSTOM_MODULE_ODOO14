@@ -1,0 +1,126 @@
+[
+    {
+        "label": "http",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "odoo",
+        "description": "odoo",
+        "isExtraImport": true,
+        "detail": "odoo",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "odoo.http",
+        "description": "odoo.http",
+        "isExtraImport": true,
+        "detail": "odoo.http",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "odoo.exceptions",
+        "description": "odoo.exceptions",
+        "isExtraImport": true,
+        "detail": "odoo.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "odoo.exceptions",
+        "description": "odoo.exceptions",
+        "isExtraImport": true,
+        "detail": "odoo.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TransactionCase",
+        "importPath": "odoo.tests.common",
+        "description": "odoo.tests.common",
+        "isExtraImport": true,
+        "detail": "odoo.tests.common",
+        "documentation": {}
+    },
+    {
+        "label": "tagged",
+        "importPath": "odoo.tests",
+        "description": "odoo.tests",
+        "isExtraImport": true,
+        "detail": "odoo.tests",
+        "documentation": {}
+    },
+    {
+        "label": "MaterialController",
+        "kind": 6,
+        "importPath": "material_purchase.controllers.material_controller",
+        "description": "material_purchase.controllers.material_controller",
+        "peekOfCode": "class MaterialController(http.Controller):\n    @http.route(['/materials'], type='http', auth='public', website=True)\n    def list_materials(self, **kwargs):\n        materials = request.env['material'].search([])\n        return request.render('module_name.material_list', {\n            'materials': materials\n        })\n    @http.route(['/materials/<model(\"material\"):material>/'], type='http', auth='public', website=True)\n    def material_details(self, material, **kwargs):\n        return request.render('module_name.material_details', {",
+        "detail": "material_purchase.controllers.material_controller",
+        "documentation": {}
+    },
+    {
+        "label": "MaterialPurchase",
+        "kind": 6,
+        "importPath": "material_purchase.models.material_purchase",
+        "description": "material_purchase.models.material_purchase",
+        "peekOfCode": "class MaterialPurchase(models.Model):\n    _name = 'x_material.purchase'\n    _description = 'Material Purchase'\n    code = fields.Char(string='Material Code', required=True)\n    name = fields.Char(string='Material Name', required=True)\n    type = fields.Selection([\n        ('fabric', 'Fabric'),\n        ('jeans', 'Jeans'),\n        ('cotton', 'Cotton')\n    ], string='Material Type', required=True)",
+        "detail": "material_purchase.models.material_purchase",
+        "documentation": {}
+    },
+    {
+        "label": "SupplyerPurchase",
+        "kind": 6,
+        "importPath": "material_purchase.models.supplyer_purchase",
+        "description": "material_purchase.models.supplyer_purchase",
+        "peekOfCode": "class SupplyerPurchase(models.Model):\n    _name = 'x_supplyer.purchase'\n    _description = 'Supplyer Purchase'\n    name = fields.Char(string='Supplyer Name', required=True)\n    supplier_material_ids = fields.One2many('x_material.purchase', 'supplier_id', string='Materials')",
+        "detail": "material_purchase.models.supplyer_purchase",
+        "documentation": {}
+    },
+    {
+        "label": "TestMaterial",
+        "kind": 6,
+        "importPath": "material_purchase.tests.test_material",
+        "description": "material_purchase.tests.test_material",
+        "peekOfCode": "class TestMaterial(TransactionCase):\n    def setUp(self):\n        super(TestMaterial, self).setUp()\n        self.supplier = self.env['x_supplyer.purchase'].create({\n            'name': 'Test Supplier',\n        })\n        self.material = self.env['x_material.purchase'].create({\n            'code': 'M001',\n            'name': 'Test Material',\n            'type': 'fabric',",
+        "detail": "material_purchase.tests.test_material",
+        "documentation": {}
+    }
+]

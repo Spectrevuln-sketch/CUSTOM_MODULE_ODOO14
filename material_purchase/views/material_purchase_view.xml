@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="model_x_material_purchase" model="ir.model">
+      <field name="name">Material Purchase</field>
+      <field name="model">x_material.purchase</field>
+    </record>
+
+    <record id="model_x_supplyer_purchase" model="ir.model">
+      <field name="name">Supplier Purchase</field>
+      <field name="model">x_supplyer.purchase</field>
+    </record>
+  </data>
+</odoo>
