@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <t t-name="pos_inharitance.ChangeButtonTemplate">
+    <div class="numpad">
+      <button class="input-button number-char" t-foreach="state.buttons" t-as="button"
+        t-att-data-value="button.value" t-att-text="button.display">
+        <t t-raw="button.display" />
+      </button>
+    </div>
+  </t>
+</templates>

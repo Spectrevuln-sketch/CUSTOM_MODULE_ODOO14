@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="CustomCharFieldTemplate" owl="1">
+        <input type="text" t-attf-class="{{ _class }}" t-ref="input" />
+    </t>
+</templates>

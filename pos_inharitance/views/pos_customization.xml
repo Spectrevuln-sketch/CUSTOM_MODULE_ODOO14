@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="pos_assets_ext" inherit_id="point_of_sale.assets">
+    <xpath expr="." position="inside">
+      <script type="text/javascript" src="/pos_inharitance/static/src/js/ChangeButton.js" />
+      <script type="text/javascript"
+        src="/pos_inharitance/static/src/js/DisablePriceDiscountButtons.js" />
+      <script type="text/javascript" src="/pos_inharitance/static/src/js/FieldFocus.js" />
+    </xpath>
+  </template>
+
+
+</odoo>

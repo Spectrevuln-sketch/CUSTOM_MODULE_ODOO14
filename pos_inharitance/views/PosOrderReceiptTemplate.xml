@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="PosOrderReceiptTemplate" owl="1">
+        <div>
+            <t t-if="props.emailSent">
+                <span>Email sudah dikirim</span>
+            </t>
+            <t t-else="">
+                <button t-on-click="sendReceipt(props.orderId)">Kirim Email</button>
+            </t>
+        </div>
+    </t>
+</templates>
